@@ -33,7 +33,7 @@ public class ItemWireCoil extends IRBaseItem {
             } else if (te instanceof BlockEntityHVIsolator tempClick) {
                 if (firstClickedOn == tempClick) {
                     Utils.sendChatMessage(player, "Link Cancelled");
-                } else if (Utils.distance(firstClickedOn.getBlockPos(), blockPos) > 48) {
+                } else if (Utils.distance(firstClickedOn.getBlockPos(), blockPos) > 1024) {
                     Utils.sendChatMessage(player, "Link Cancelled, Too far");
                 } else {
                     if (firstClickedOn.link(tempClick)) {
